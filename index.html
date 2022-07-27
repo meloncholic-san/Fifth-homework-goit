@@ -22,7 +22,7 @@
         <a href="./index.html" class="header-logo"> <span class="logo-blue">Web</span>  <span class="logo-dark">studio </span> </a> <!--span для изменения стиля лого фирмы-->
         <nav class="header-nav">
             <ul class="header-link-wrapper">
-                <li class="header-link-item"><a class="nav-link" href="./index.html">Студия</a></li>
+                <li class="header-link-item"><a class="nav-link active-page" href="./index.html">Студия</a></li>
                 <li class="header-link-item"><a class="nav-link" href="./portfolio.html">Портфолио</a></li>
                 <li class="header-link-item"><a class="nav-link" href="#contacts">Контакты</a></li>
             </ul>
@@ -59,7 +59,7 @@
             <div class="container">
                 <div class="hat-wrapper">
                 <h1 class="hat-phrase">Эффективные решения для вашего бизнеса</h1>
-                <button class="hat-button" type="button">Заказать услугу</button>
+                <button class="hat-button" type="button" data-modal-open>Заказать услугу</button>
                 </div>
             </div>
         </section>
@@ -114,9 +114,27 @@
             <div class="container">
                 <h2 class="projects-title">Чем мы занимаемся</h2>
                 <ul class="projects-list">
-                    <li class="projects-item"><img src="./images/about-us/work1.jpg" alt="Первый образец" width="370" height="295"></li>
-                    <li class="projects-item"><img src="./images/about-us/work2.jpg" alt="Второй образец" width="370" height="295"></li>
-                    <li class="projects-item"><img src="./images/about-us/work3.jpg" alt="Третий образец" width="370" height="295"></li>
+                    <li class="projects-item">
+                        <div class="projects-item-wrapper">
+                            <img src="./images/about-us/work1.jpg" alt="Первый образец" width="370" height="295">
+                            <p class="project-description">Десктопные приложения</p>
+                        </div>
+                    </li>
+                    <li class="projects-item">
+                        <div class="projects-item-wrapper">
+                            <img src="./images/about-us/work2.jpg" alt="Второй образец" width="370" height="295">
+                            <p class="project-description">Мобильные приложения</p>
+                        </div>
+                    </li>
+                    <li class="projects-item">
+                        <div class="projects-item-wrapper">
+                           <img src="./images/about-us/work3.jpg" alt="Третий образец" width="370" height="295">
+                           <p class="project-description">Дизайнерские решения</p>
+                        </div>
+                    </li>
+                        
+
+
                 </ul>
             </div>
         </section>
@@ -348,5 +366,15 @@
         </div>
     </footer>
 
+
+
+    <!--Модальное окно-->
+    <div class="backdrop">
+        <div class="modal-wrapper is-hidden" data-modal>
+            <button type="button" class="modal-button" data-modal-close>X</button>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum, ipsam!</p>
+        </div>
+    </div>
+<script src="/js/modal.js"></script>
 </body>
 </html>
