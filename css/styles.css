@@ -684,8 +684,15 @@ margin-bottom: 20px;
     cursor: pointer;
     pointer-events: auto;
 }
+.close-icon-link{
+    width: 18px;
+    height: 18px;
+}
+.close-icon{
 
-
+    width: 16px;
+    height: 16px;
+}
 
 .visually-hidden {
     position: absolute;

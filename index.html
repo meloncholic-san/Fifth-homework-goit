@@ -371,10 +371,16 @@
     <!--Модальное окно-->
     <div class="backdrop">
         <div class="modal-wrapper is-hidden" data-modal>
-            <button type="button" class="modal-button" data-modal-close>X</button>
+            <button type="button" class="modal-button" data-modal-close>
+                <a class="close-icon-link">
+                    <svg class="close-icon"  height="18" width="18">
+                     <use href="./images/svg/icons.svg#close-icon" ></use>
+                    </svg>
+                </a>
+            </button>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum, ipsam!</p>
         </div>
     </div>
-<script src="/js/modal.js"></script>
+<script src="./js/modal.js"></script>
 </body>
 </html>
