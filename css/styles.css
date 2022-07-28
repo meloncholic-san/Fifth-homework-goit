@@ -682,7 +682,9 @@ margin-bottom: 20px;
     cursor: pointer;
     pointer-events: auto;
 }
-
+.modal-button:enabled{
+    pointer-events: auto;
+}
 
 
 
