@@ -324,6 +324,8 @@ color: var(--primary-light-txt);
 .crew{
     padding-top: 94px;
     padding-bottom: 94px;
+    background-color: var(--secondary-light-bg);
+
 }
 .crew-title{
     margin-bottom: 50px;
@@ -406,6 +408,7 @@ letter-spacing: 0.03em;
 color: var(--primary-light-txt);
 margin-bottom: 50px;
 }
+
 .clients-list{
     display: flex;
     gap: 30px;
@@ -418,12 +421,18 @@ margin-bottom: 50px;
     min-width: 170px;
     min-height: 92px;
     border-radius: 4px;
+    transition: border var(--main-animation);
+
+    
 }
-.clients-item:hover{
+.clients-item:hover,
+.clients-item:focus{
     border: 1px solid var(--accent-txt);
 }
 
-.clients-item:hover .clients-icon{
+.clients-item:hover .clients-icon,
+.clients-item:focus .clients-icon,
+.clients-item:focus-visible .clients-icon{
     fill: var(--accent-txt);
 }
 
@@ -435,6 +444,7 @@ margin-bottom: 50px;
 }
 .clients-icon{
     fill: var(--crew-icon-primary);
+    transition: fill var(--main-animation);
 }
 
 
@@ -458,12 +468,13 @@ margin-bottom: 50px;
     color:var(--primary-light-txt);
     font-family: inherit;
     padding: 6px 22px;
-    transition: background-color var(--main-animation), color var(--main-animation);
+    background: var(--secondary-light-bg);
+    transition: background var(--main-animation), color var(--main-animation);
 }
 .portfolio-button-item:hover,
 .portfolio-button-item:focus{
     cursor: pointer;
-    background-color: var(--accent-txt);
+    background: var(--accent-txt);
     color: #ffffff;
 }
 
@@ -629,6 +640,7 @@ margin-bottom: 20px;
 .footer-icon{
     margin: auto auto;
     fill: var(--logo-dark-txt);
+    transition: fill var(--main-animation);
    
 }
 
@@ -646,17 +658,20 @@ margin-bottom: 20px;
     transform: translateX(-50%);
     width: 100vw;
     height: 100vh;
+    background: rgba(0, 0, 0, 0.2);
     pointer-events: none;
     opacity: 1;
     visibility: visible;
-    transition: opacity var(--main-animation), visibility var(--main-animation);
-    z-index: 100;
+    transition: opacity var(--main-animation), visibility var(--main-animation), background var(--main-animation);
+    
+
 }
 
-.backdrop .is-hidden{
+.is-hidden{
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
+    background: rgba(0, 0, 0, 0.0);
 }
 
 .modal-wrapper{
@@ -670,7 +685,9 @@ margin-bottom: 20px;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 40px;
+
 }
+
 
 .modal-button{
     position: absolute;
